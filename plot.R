@@ -28,7 +28,7 @@ data <- data %>%
 
 # Plots -------------------------------------------------------------------
 
-my_theme =
+my_theme <-
   theme_wsj(base_family = NULL, title_family = NULL, base_size = 12) +
   theme(
     text = element_text(family = "Noto Sans CJK TC"),  # MacOS only
@@ -41,7 +41,7 @@ my_theme =
     plot.caption = element_text(size = 8, face = "plain")
   )
 
-old_theme = theme_set(my_theme)
+old_theme <- theme_set(my_theme)
 
 p1 <- data %>%
   ggplot(mapping = aes(x=confirmed_date, y=diff_n, fill=days_delay)) +
@@ -71,8 +71,7 @@ p1 <- data %>%
   ggtitle("COVID-19 本土確診病例校正回歸情形 (2021)",
           subtitle = "確診人數 (依確診日)") +
   xlab("確診日") + ylab(NULL) +
-  labs(caption=str_c("Dataset credit: Jeremy Liu", "Plot by: leoluyi", sep = "\n")) +
-  my_theme
+  labs(caption=str_c("Dataset credit: Jeremy Liu", "Plot by: leoluyi", sep = "\n"))
 p1
 
 p2 <- data %>%
@@ -104,8 +103,7 @@ p2 <- data %>%
           subtitle = "確診人數 (依確診日)") +
   xlab("確診日") + ylab(NULL) +
   labs(caption=str_c("Dataset credit: Jeremy Liu", "Plot by: leoluyi", sep = "\n")) +
-  guides(fill = guide_legend(ncol = 7, byrow=TRUE)) +
-  my_theme
+  guides(fill = guide_legend(ncol = 7, byrow=TRUE))
 p2
 
 p3 <- data %>%
@@ -137,8 +135,7 @@ p3 <- data %>%
           subtitle = "確診人數 (依公布日)") +
   xlab("公布日") + ylab(NULL) +
   labs(caption=str_c("Dataset credit: Jeremy Liu", "Plot by: leoluyi", sep = "\n")) +
-  guides(fill = guide_legend(ncol = 7, byrow=TRUE)) +
-  my_theme
+  guides(fill = guide_legend(ncol = 7, byrow=TRUE))
 p3
 
 ggsave("img/p1.png", p1, width = 8, height = 6)
