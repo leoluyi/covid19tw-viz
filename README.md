@@ -24,6 +24,10 @@ install.packages(
 
 ![img/p3.png](img/p3.png)
 
+## Datasets
+
+- [covid19_modified_twdata_20210528.csv](https://drive.google.com/file/d/1vyNYDtiNAIwHGKo31cjjMys7hi6OxJuu/view?fbclid=IwAR0RzHfE9JRL4wfW-quXSrX5dcAJ_8mNMHhOSBFE8I__d5KppdW9NiNPw9k)
+
 ## References
 
 - [Taiwan CDC](https://www.cdc.gov.tw/)
